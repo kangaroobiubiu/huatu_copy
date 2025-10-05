@@ -16,7 +16,7 @@
   "content_scripts": [
     {
       "matches": ["https://v.huatu.com/tiku/*"],
-      "js": ["content_script3.js"],
+      "js": ["content_script5.js"],
       "css": ["styles.css"],
       "run_at": "document_idle"
     }
