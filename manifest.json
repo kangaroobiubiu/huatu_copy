@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "华图题目复制工具",
+  "version": "1.0",
+  "description": "在试题解析页勾选模块（试题/统计/解析/考点/来源），复制单题/全部/错题。",
+  "icons": {
+
+  },
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://v.huatu.com/tiku/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://v.huatu.com/tiku/*"],
+      "js": ["content_script3.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
