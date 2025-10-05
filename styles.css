@@ -1,0 +1,67 @@
+/* styles.css */
+#ht-copy-panel {
+    position: fixed;
+    right: 18px;
+    top: 80px;
+    width: 360px;
+    max-height: 70vh;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    z-index: 999999;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #222;
+    border-radius: 6px;
+    overflow: hidden;
+    pointer-events: auto;
+}
+
+#ht-copy-panel * {
+    pointer-events: auto !important; /* ✅ 保证内部checkbox和按钮可交互 */
+}
+
+#ht-copy-panel .ht-panel-header {
+    padding: 10px 12px;
+    background: linear-gradient(90deg,#f7f9fc,#fff);
+    border-bottom: 1px solid #eee;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+#ht-copy-panel .ht-panel-header strong { font-size:14px; }
+#ht-close-btn { cursor:pointer; color:#888; }
+#ht-copy-panel .ht-panel-body { padding: 10px; overflow:auto; max-height:calc(70vh - 48px); }
+#ht-copy-panel .ht-modules label { display:inline-block; width:50%; margin-bottom:6px; }
+#ht-copy-panel .ht-actions { margin:8px 0; display:flex; gap:8px; }
+#ht-copy-panel button {
+    border: none;
+    padding:6px 8px;
+    background:#1677ff;
+    color:#fff;
+    border-radius:4px;
+    cursor:pointer;
+}
+#ht-copy-panel .ht-question-list { margin-top:8px; max-height:36vh; overflow:auto; border-top:1px dashed #eee; padding-top:8px; }
+.ht-q-row { display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px dashed #fafafa; align-items:center; }
+.ht-q-row.ht-wrong { background:#fff8f8; border-left:4px solid #ff6b6b; }
+.ht-q-row .ht-q-left { flex:1; margin-right:8px; }
+.ht-q-row .ht-q-right { flex:0 0 auto; }
+.ht-q-row .ht-copy-this { padding:4px 6px; font-size:12px; }
+#ht-notice {
+    position: fixed;
+    right: 24px;
+    top: 50px;
+    background: rgba(34,34,34,0.9);
+    color:#fff;
+    padding:8px 12px;
+    border-radius:6px;
+    z-index:1000000;
+    opacity:0;
+    transform:translateY(-6px);
+    transition: all .22s ease;
+    pointer-events:none;
+}
+#ht-notice.show { opacity:1; transform:translateY(0); pointer-events:auto; }
+.ht-foot { color:#666; margin-top:8px; font-size:12px; }
+z
